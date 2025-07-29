@@ -1,0 +1,411 @@
+/* palette couleur du moodboard */
+:root {
+  --primary-blue: #0D1CF7;
+  --highlight-red: #F70808;
+  --light-gray: #F5F5F5;
+  --pure-white: #ffffff;
+  --deep-black: #121212;
+
+  --font-heading: 'Contrail One', 'Arial', 'Helvetica', sans-serif;
+  --font-body: 'Candara', 'Segoe UI', 'Open Sans', sans-serif;
+
+
+  /* Base reset */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--deep-black);
+    
+  
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    color: var(--light-gray);
+    font-family: var(--font-body);
+  }
+
+
+  /* Headings */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    color: var(--pure-white);
+    margin-bottom: 1rem;
+  }
+
+  /* Paragraphes */
+  p {
+    text-align: justify;
+  }
+
+
+
+  /*logo */
+
+
+}
+.logo-rotate {
+  width: 40px;
+  height: 40px;
+  animation: rotateLogo 10s linear infinite;
+  margin: 0.8rem 0.5rem;
+}
+
+@keyframes rotateLogo {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Nav bar */
+.navbar {
+  background-color: var(--primary-blue);
+}
+
+.navbar-bordered {
+  border-bottom: 2px solid #ffffff;
+}
+
+
+.navbar .nav-link {
+  color: var(--pure-white);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--highlight-red);
+}
+
+.navbar-brand:hover {
+  color: var(--highlight-red);
+  transition: color 0.3s ease;
+}
+
+/* Navbar sticky */
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Pour éviter que le contenu se cache derrière */
+body::before {
+  content: "";
+  display: block;
+  height: 0px;
+}
+
+body.sticky-active::before {
+  height: 70px; /* Ajuste à la hauteur de ta navbar */
+}
+
+/* Bouton hamburger rouge avec traits blancs */
+.navbar-toggler {
+  background-color: #dc3545;
+  /* rouge vif */
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Boutons et liens */
+a,
+.btn {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+a:hover,
+.btn:hover {
+  color: var(--highlight-red);
+}
+
+/* Boutons */
+
+
+.nav-link.active::after {
+  content: ""; /* Texte pour indiquer la page active */
+  display: flex; /* Utilisation de flex pour centrer le contenu */
+  justify-content: center;
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  margin-top: 5px;
+  animation: pulse-bar 2s infinite ease-in-out; /* Animation de pulsation */
+  line-height: 1;
+}
+
+@keyframes pulse-bar {
+  0% , 100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+
+
+/* Footer */
+footer {
+  border-top: 2px solid var(--pure-white);
+  color: var(--pure-white);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.contact-page {
+  max-width: 600px;
+  margin: auto;
+  /* ✅ Pour garder le flex horizontal */
+  background-color: var(--pure-white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.form-input,
+.form-textarea {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.form-button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: #007BFF;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.contact-page,
+.cv-box {
+  background-color: var(--pure-white);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  flex: 1 1 400px;
+  max-width: 480px;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.cv-title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--highlight-red);
+  text-align: center;
+}
+
+.cv-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cv-view-button,
+.cv-download-button {
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cv-view-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.cv-view-button:hover {
+  background-color: #0056b3;
+}
+
+.cv-download-button {
+  background-color: var(--highlight-red);
+  color: #fff;
+}
+
+.cv-download-button:hover {
+  background-color: #c70000;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Style pour la bannière de cookies */
+.cookie-banner {
+  position: fixed;
+  top: 0; /* ⬅️ au lieu de bottom */
+  left: 0;
+  width: 100%;
+  background-color: #212529;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Ombre vers le bas */
+  flex-wrap: wrap;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-buttons .btn {
+  color: white !important; /* 👈 Texte des boutons en blanc */
+}
+
+@media (max-width: 576px) {
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Carousel */
+
+.carousel-item {
+  box-shadow: 0 0.1rem 10rem rgba(66, 3, 240, 0.4);
+}
+/* Monte les flèches de navigation vers le haut */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 10px; /* positionne en haut */
+  bottom: auto; /* désactive la position par défaut */
+  width: auto;
+  padding: 0 1rem;
+  height: 2.5rem;
+  align-items: start;
+}
+
+/* Pour mieux positionner les icônes à gauche/droite */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(249, 1, 1, 0.6); /* contraste léger autour de l’icône */
+  border-radius: 30%;
+  padding: 0.5rem;
+  margin: 0.5rem; /* espace autour de l’icône */
+  width: 2.5rem; /* taille uniforme */
+  height: 1rem;
+}
+
+/* Fond contrasté pour chaque slide */
+.carousel-item {
+  background-color: #fffcfc; /* gris foncé différent du bg global */
+  padding: 2rem;
+  border-radius: 0; 
+  margin: 0 1rem; /* écarte un peu le carousel des bords */
+}
+
+/* Texte centré avec marge adaptée */
+.carousel-item p {
+  margin-top: 1rem;
+  color: #050505;
+  text-align: justify;
+}
+

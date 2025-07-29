@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Accueil Portfolio Aymen Ben Amor</title>
+    <link rel="icon" type="image/png" href="/Portofolio/images/logoba.webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+<div id="cookie-banner" class="cookie-banner d-none">
+  <p class="m-0">
+    Ce site utilise des cookies pour améliorer l'expérience utilisateur.
+  </p>
+  <div class="cookie-buttons">
+    <button id="acceptCookies" class="btn btn-success btn-sm">Accepter</button>
+    <button id="refuseCookies" class="btn btn-danger btn-sm">Refuser</button>
+  </div>
+</div>
+
+ <body class="bg-dark text-light" data-page="index">
+    <header class="container py-3">
+      <h1 class="text-center">Aymen Ben Amor</h1>
+      <p class="text-center fst-italic">Portfolio personnel</p>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <img src="/Portofolio/images/logoba.webp" alt="Logo" class="logo-rotate" />
+        <a class="navbar-brand" href="/Portofolio/index.html">Aymen Ben Amor</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/Portofolio/index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Portofolio/apropos.html">À propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Portofolio/projets.html">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Portofolio/architecture.html">Architecture</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Portofolio/voyages.html">Voyages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Portofolio/volcanisme.html">Volcanisme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Portofolio/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<main class="container my-5">
+  <section class="row align-items-center">
+    <!-- Colonne photo -->
+    <div class="col-md-4 text-center mb-4 mb-md-0">
+      <img
+        src="/Portofolio/images/aymen.png"
+        alt="Portrait de Aymen Ben Amor"
+        class="img-fluid border border-4 border-danger rounded"
+        style="max-width: 180px" />
+    </div>
+
+    <!-- Colonne texte -->
+    <div class="col-md-8">
+      <h2>Bienvenue, je suis Aymen Ben Amor.</h2>
+       <P>j'ai plus de 40 ans, et en pleine reconversion professionnelle.</p>
+        <h2 class="lead">Mon portfolio est assez artisanal et modeste.</h2>
+      <p>
+        Ce site présente mon parcours, mes passions, mes projets et mon envie
+        de continuer à apprendre et à créer à mon rythme.
+      </p>
+    </div>
+  </section>
+</main>
+
+    <footer class="bg-danger text-center py-3">
+      <small>&copy; 2025 Aymen Ben Amor - Tous droits réservés</small>
+    </footer>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("acceptCookies");
+    const refuseBtn = document.getElementById("refuseCookies");
+
+    const choice = localStorage.getItem("cookieConsent");
+
+    if (!choice) {
+      banner.classList.remove("d-none");
+    }
+
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookieConsent", "accepted");
+      banner.classList.add("d-none");
+    });
+
+    refuseBtn.addEventListener("click", () => {
+      localStorage.setItem("cookieConsent", "refused");
+      banner.classList.add("d-none");
+    });
+  });
+</script>
+
+<script>
+  const currentPage = document.body.dataset.page;
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    if (link.getAttribute('href').includes(currentPage)) {
+      link.classList.add('active-page');
+    }
+  });
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
