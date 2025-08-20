@@ -24,14 +24,7 @@ window.addEventListener("scroll", function () {
   const imageModal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImage');
 
-  imageModal.addEventListener('show.bs.modal', function (event) {
-    const triggerImg = event.relatedTarget;
-    const imageUrl = triggerImg.getAttribute('data-bs-image');
-    const altText = triggerImg.getAttribute('alt') || 'Image agrandie';
-    
-    modalImg.src = imageUrl;
-    modalImg.alt = altText;
-  });
+
 
 //script cookie page index.html
   // Cookie consent script
@@ -56,3 +49,6 @@ window.addEventListener("scroll", function () {
       banner.classList.add("d-none");
     });
   });
+
+  console.log("test");
+  
