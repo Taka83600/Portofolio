@@ -1,0 +1,26 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "Site vitrine personnel",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taka83600/Portofolio.git"
+  },
+  "keywords": [],
+  "author": "Aymen Ben Amor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taka83600/Portofolio/issues"
+  },
+  "homepage": "https://github.com/Taka83600/Portofolio#readme",
+  "devDependencies": {
+    "eslint": "^9.30.1",
+    "htmlhint": "^1.6.3",
+    "stylelint": "^16.21.1",
+    "stylelint-config-standard": "^38.0.0"
+  }
+}
