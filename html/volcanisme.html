@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Volcanisme Aymen Ben Amor</title>
-    <link rel="icon" type="image/png" href="/Portofolio/images/logoba.webp" />
+    <link rel="icon" type="image/png" href="../images/logoba.webp" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body class="bg-dark text-light" data-page="Volcanisme">
     <header class="container py-3">
@@ -20,8 +20,8 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="mainNavbar">
       <div class="container-fluid">
-        <img src="/Portofolio/images/logoba.webp" alt="Logo" class="logo-rotate" />
-        <a class="navbar-brand" href="/Portofolio/index.html"
+        <img src="../images/logoba.webp" alt="Logo" class="logo-rotate" />
+        <a class="navbar-brand" href="../index.html"
           >Aymen Ben Amor</a
         >
         <button
@@ -36,25 +36,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/index.html">Accueil</a>
+              <a class="nav-link" href="../index.html">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/apropos.html">À propos</a>
+              <a class="nav-link" href="apropos.html">À propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/projets.html">Projets</a>
+              <a class="nav-link" href="projets.html">Projets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/architecture.html">Architecture</a>
+              <a class="nav-link" href="architecture.html">Architecture</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/voyages.html">Voyages</a>
+              <a class="nav-link" href="voyages.html">Voyages</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/Portofolio/volcanisme.html">Volcanisme</a>
+              <a class="nav-link active" href="volcanisme.html">Volcanisme</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/contact.html">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -83,7 +83,7 @@
       >
         <div class="col-12 col-md-4 text-center">
           <img
-            src="/Portofolio/images/Catania_vista_dallalto_e_il_vulcano_Etna_a_sovrastarla.webp"
+            src="../images/Catania_vista_dallalto_e_il_vulcano_Etna_a_sovrastarla.webp"
             alt="Etna Sicile Italie"
             class="img-fluid border border-4 border-primary rounded"
           />
@@ -125,7 +125,7 @@
       >
         <div class="col-12 col-md-4 text-center">
           <img
-            src="/Portofolio/images/maderevolcan.webp"
+            src="../images/maderevolcan.webp"
             alt="Pont Art déco"
             class="img-fluid border border-4 border-primary rounded"
           />
@@ -164,7 +164,7 @@
       >
         <div class="col-12 col-md-8 text-center">
           <img
-            src="/Portofolio/images/volcaneyjafjallajokull-islande-scaled.webp"
+            src="../images/volcaneyjafjallajokull-islande-scaled.webp"
             alt="Eyjafjallajokull-islande"
             class="img-fluid border border-4 border-primary rounded"
           />
@@ -198,7 +198,7 @@
       >
         <div class="col-12 col-md-4 text-center">
           <img
-            src="/Portofolio/images/vesuvio.webp"
+            src="../images/vesuvio.webp"
             alt="Vesuve Campanie Italie"
             class="img-fluid border border-4 border-primary rounded"
           />
@@ -235,7 +235,7 @@
       >
         <div class="col-12 col-md-4 text-center">
           <img
-            src="/Portofolio/images/stromboli-54111-1920x1440.webp"
+            src="../images/stromboli-54111-1920x1440.webp"
             alt="Strombooli Îles Éoliennes Italie"
             class="img-fluid border border-4 border-primary rounded"
           />
@@ -268,7 +268,7 @@
       >
         <div class="col-12 col-md-8 text-center">
           <img
-            src="/Portofolio/images/volcansauvergne.webp"
+            src="../images/volcansauvergne.webp"
             alt="Puy de Dôme Auvergne France"
             class="img-fluid border border-4 border-primary rounded"
           />
@@ -299,29 +299,7 @@
       <small>&copy; 2025 Aymen Ben Amor - Tous droits réservés</small>
     </footer>
 
-    <script>
-      window.addEventListener("scroll", function () {
-        const navbar = document.getElementById("mainNavbar");
-        const scrollY = window.scrollY;
-
-        if (scrollY > 50) {
-          navbar.classList.add("sticky-navbar");
-        } else {
-          navbar.classList.remove("sticky-navbar");
-        }
-      });
-    </script>
-
-    <script>
-      const currentPage = document.body.dataset.page;
-      const navLinks = document.querySelectorAll(".nav-link");
-
-      navLinks.forEach((link) => {
-        if (link.getAttribute("href").includes(currentPage)) {
-          link.classList.add("active-page");
-        }
-      });
-    </script>
+    <script src="../js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>

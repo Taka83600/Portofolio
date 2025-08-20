@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>À propos Aymen Ben Amor</title>
-    <link rel="icon" type="image/png" href="./images/logoba.webp" />
+    <link rel="icon" type="image/png" href="../images/logoba.webp" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body class="bg-dark text-light" data-page="apropos">
     <header class="container py-3">
@@ -20,39 +20,39 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="mainNavbar">
       <div class="container-fluid">
-        <img src="./images/logoba.webp" alt="Logo" class="logo-rotate" />
-        <a class="navbar-brand" href="/Portofolio/index.html">Aymen Ben Amor</a>
+        <img src="../images/logoba.webp" alt="Logo" class="logo-rotate" />
+        <a class="navbar-brand" href="../index.html">Aymen Ben Amor</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
+          data-bs-target="#navbarNav">
+          
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-             <a class="nav-link" href="/Portofolio/index.html">Accueil</a>
+             <a class="nav-link" href="../index.html">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/Portofolio/apropos.html">À propos</a>
+              <a class="nav-link active" href="apropos.html">À propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/projets.html">Projets</a>
+              <a class="nav-link" href="projets.html">Projets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/architecture.html">Architecture</a>
+              <a class="nav-link" href="architecture.html">Architecture</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/voyages.html">Voyages</a>
+              <a class="nav-link" href="voyages.html">Voyages</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/volcanisme.html">Volcanisme</a>
+              <a class="nav-link" href="volcanisme.html">Volcanisme</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Portofolio/contact.html">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -64,7 +64,7 @@
 <header class="container py-4 text-center">
       <h2>À propos de moi</h2>
       <h3 class="fst-italic text-center py-3">Un parcours atypique, une motivation authentique.</h3>
-      <img src="./images/aymen.png" alt="Photo de Aymen Ben Amor" class="rounded " style="width: 80px; height: 110px; object-fit: cover;" />
+      <img src="../images/aymen.png" alt="Photo de Aymen Ben Amor" class="rounded " style="width: 80px; height: 110px; object-fit: cover;" />
     </header>
 
 
@@ -157,30 +157,7 @@
       <small>&copy; 2025 Aymen Ben Amor - Tous droits réservés</small>
     </footer>
 
-        <script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("mainNavbar");
-    const scrollY = window.scrollY;
-
-    if (scrollY > 50) {
-      navbar.classList.add("sticky-navbar");
-    } else {
-      navbar.classList.remove("sticky-navbar");
-    }
-  });
-</script>
-
-   <script>
-  const currentPage = document.body.dataset.page;
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  navLinks.forEach(link => {
-    if (link.getAttribute('href').includes(currentPage)) {
-      link.classList.add('active-page');
-    }
-  });
-</script>
-
+    <script src="../js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
