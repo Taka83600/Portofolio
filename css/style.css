@@ -3,7 +3,7 @@
   --primary-blue: #0D1CF7;
   --highlight-red: #F70808;
   --light-gray: #F5F5F5;
-  --pure-white: #ffffff;
+  --pure-white: #fff;
   --deep-black: #121212;
   --font-heading: 'Contrail One', 'Arial', 'Helvetica', sans-serif;
   --font-body: 'Candara', 'Segoe UI', 'Open Sans', sans-serif;
@@ -36,11 +36,6 @@
     text-align: justify;
   }
 
-
-
-  /*logo */
-
-
 }
 .logo-rotate {
   width: 40px;
@@ -49,7 +44,7 @@
   margin: 0.8rem 0.5rem;
 }
 
-@keyframes rotateLogo {
+@keyframes rotatelogo {
   from {
     transform: rotate(0deg);
   }

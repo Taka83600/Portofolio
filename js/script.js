@@ -21,8 +21,7 @@ window.addEventListener("scroll", function () {
 
   // script for image modal
   // This script handles the image modal functionality
-  const imageModal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImage');
+ 
 
 
 
@@ -50,5 +49,5 @@ window.addEventListener("scroll", function () {
     });
   });
 
-  console.log("test");
+
   
